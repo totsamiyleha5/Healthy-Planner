@@ -1,0 +1,76 @@
+.container {
+    padding: 32px 12px;
+    max-width: 620px;
+    margin: auto;
+}
+body {
+    --bs-body-color: #fff;
+    --bs-body-font-family: Inter;
+    transition: all 0.5s ease-in-out;
+}
+.pomo-color{
+    --bs-body-bg: rgb(7, 162, 162);
+}
+.short-color{
+    --bs-body-bg: rgb(10, 138, 89);
+}
+.long-color{
+    --bs-body-bg: rgb(210, 146, 9);
+}
+header, footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#timer {
+    background-color: rgba(255,255,255,0.2);
+    width: 100%;
+}
+.timer-count {
+    display: none;
+    font-size: 120px;
+    font-weight: 700;
+}
+.timer-count.active{
+    display: block;
+}
+.btn {
+    --bs-btn-bg: var(--bs-body-color);
+    --bs-btn-color: var(--bs-body-bg);
+    width: 200px;
+    height: 55px;
+    font-size: 22px;
+    font-weight: 600;
+    box-shadow: 0px 6px 0px #ececec;
+}
+.btn.pressed {
+    border: none;
+    box-shadow: none;
+    background-color: #fff !important;
+    --bs-btn-active-color: var(--bs-btn-color);
+    transform: translateY(6px);
+}
+.btn:hover {
+    --bs-btn-hover-color: var(--bs-btn-color);
+    background-color: #f4f4f4;
+    border: none;
+}
+.btn:active{
+    border: none;
+    box-shadow: none;
+    background-color: #fff !important;
+    --bs-btn-active-color: var(--bs-btn-color);
+    transform: translateY(6px);
+}
+.btn-switch {
+    border: none;
+    margin: 0;
+    background: none;
+    color: var(--bs-body-color);
+    padding: 2px 12px;
+    font-size: 16px;
+}
+.btn-switch.active {
+    background-color: rgba(0,0,0,0.15);
+    font-weight: 600;
+}
