@@ -4,7 +4,7 @@
 [DONE] 4. Make a JavaScript for timer countdown for all three.
 [DONE] 5. Make a script for automatic switch to "Short Break" or "Long Break", according to the Pomodoro model
 [DONE] 6. Button "Start" activation with spacebar or enter.
-7. The progress line script.
+[DONE] 7. The progress line script.
 8. Adding sound effects.
 9. Settings for customizing the timer.
 10. Collecting the usage data? (Not sure about last two - might need a backend? Not really what I am aiming for here)
