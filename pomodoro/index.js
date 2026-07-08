@@ -16,6 +16,8 @@ function pomodoroTimer() {
     const progressBar = document.getElementById('progress-bar');
     const pomoCounter = document.getElementById('pomo-number-total');
     const body = document.body;
+    const clickSound = new Audio('audio/click-sound.mp3');
+    const finishSound = new Audio('audio/finish.mp3');
     let pomoTimer = null;
     let isRunning = false;
     let type = 'pomo';
@@ -32,6 +34,7 @@ function pomodoroTimer() {
             pomoTimer = setInterval(timerStarts, 1000);
             btn.classList.add('pressed');
             btn.innerHTML = 'PAUSE';
+            clickSound.play();
         } else {
             timerStops();
         }
@@ -45,9 +48,15 @@ function pomodoroTimer() {
     });
     function timerStarts() {
         if (time === 0) {
-            timerStops();
+            timerStops(true);
+            finishSound.play();
             isRunning = false;
             pomoTimer = null;
+            if (type === 'pomo') {
+                pomoCount++;
+                pomoCountTotal++;
+                pomoCounter.innerHTML = pomoCountTotal;
+            }
             if (type === 'pomo' && pomoCount < 4) {
                 switchToShort();
             } else if (type === 'pomo' && pomoCount === 4) {
@@ -64,15 +73,11 @@ function pomodoroTimer() {
             progressBarCount();
         }
     };
-    function timerStops() {
+    function timerStops(silent = false) {
+        if (!silent) clickSound.play();
         clearInterval(pomoTimer);
         btn.classList.remove('pressed');
         btn.innerHTML = 'START';
-        if (type === 'pomo' && time === 0) {
-            pomoCount++;
-            pomoCountTotal++;
-            pomoCounter.innerHTML = pomoCountTotal;
-        }
     };
     function formatTime(seconds) {
         const mins = Math.floor(seconds / 60);
@@ -86,7 +91,7 @@ function pomodoroTimer() {
         body.classList.remove('pomo-color', 'long-color');
         body.classList.add('short-color');
         time = shortBreak;
-        timer.innerHTML = '5:00';  
+        timer.innerHTML = formatTime(time); 
         progressTotal = time;
         progressBarCount(); 
     }
@@ -97,7 +102,7 @@ function pomodoroTimer() {
         body.classList.remove('pomo-color', 'short-color');
         body.classList.add('long-color');
         time = longBreak;
-        timer.innerHTML = '15:00';  
+        timer.innerHTML = formatTime(time);  
         progressTotal = time;
         progressBarCount(); 
     }
@@ -108,14 +113,14 @@ function pomodoroTimer() {
         body.classList.remove('short-color', 'long-color');
         body.classList.add('pomo-color');
         time = pomoTime;
-        timer.innerHTML = '25:00';
+        timer.innerHTML = formatTime(time);
         progressTotal = time;   
         progressBarCount();
     }
     tabs.forEach((tab) => {
         tab.addEventListener('click', () => {
             const tabID = tab.getAttribute('id');
-            timerStops();
+            timerStops(true);
             isRunning = false;
             pomoTimer = null;
             const body = document.body;
