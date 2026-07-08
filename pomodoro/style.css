@@ -76,6 +76,11 @@ header, footer{
     background-color: rgba(0,0,0,0.15);
     font-weight: 600;
 }
+@media(max-width: 572px) {
+    .btn-switch{    
+        font-size: 12px;
+    }
+}
 #progress-bar {
     position: absolute;
     bottom: -10px;

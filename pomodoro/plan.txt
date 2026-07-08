@@ -5,6 +5,6 @@
 [DONE] 5. Make a script for automatic switch to "Short Break" or "Long Break", according to the Pomodoro model
 [DONE] 6. Button "Start" activation with spacebar or enter.
 [DONE] 7. The progress line script.
-8. Adding sound effects.
+[DONE] 8. Adding sound effects.
 9. Settings for customizing the timer.
-10. Collecting the usage data? (Not sure about last two - might need a backend? Not really what I am aiming for here)
+10. Collecting the usage data?
