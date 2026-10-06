@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body class="pomodoro-background">
+        <header id="header">
+            <div class="container">
+                <a class="logo" href="index.html">
+                    <img src="images/logo.svg">
+                    <p class="bold">Healthy Planner</p>
+                </a>
+                <nav>
+                    <a class="nav-item" href="index.html">Home</a>
+                    <a class="nav-item" href="pomodoro.html">Pomodoro</a>
+                    <a class="nav-item">New features - soon</a>
+                </nav>
+            </div>
+        </header>
+        <section id="timer">
+            <div class="timer-wrapper">
+                <h1>Pomodoro Timer</h1>
+                <div class="pomodoro-square">
+                    <div class="pomo-tabs">
+                        <button id="pomodoro" class="btn-switch active">Pomodoro</button>
+                        <button id="short-break" class="btn-switch">Short Break</button>
+                        <button id="long-break" class="btn-switch">Long Break</button>
+                    </div>
+                    <div id="pomodoro-count" class="timer-count active">25:00</div>
+                    <button id="start" class="btn btn-start">START</button>
+                    <div>
+                        <p>Number of pomodoros completed: <span id="pomo-number-total">0</span></p>
+                    </div>
+                    <div id="progress-bar"></div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="container">
+                <div class="logo">
+                    <img src="images/logo.svg">
+                    <p class="small">@2026 Healthy Planner</p>
+                </div>
+            </div>
+        </footer>
+        <div class="bg-layer bg-default active"></div>
+        <div class="bg-layer bg-green"></div>
+        <div class="bg-layer bg-purple"></div>
+        <div class="bg-layer bg-orange"></div>
+        <script src="js/index.js"></script>
+    </body>
+</html>

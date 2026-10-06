@@ -1,0 +1,272 @@
+:root {
+    --text-family: 'PT Sans';
+    --primary-color: #09B71A;
+    --secondary-color: #791E94;
+    --third-color: #B83922;
+    --hover-color: #53C922;
+    --active-color: #7DD427;
+    --gradient-main: linear-gradient(to right,
+        #09B71A 0%,
+        #0AB71A 11.79%,
+        #0DB81A 21.38%,
+        #11B91B 29.12%,
+        #17BA1C 35.34%,
+        #1EBC1C 40.37%,
+        #26BE1D 44.56%,
+        #2FC11E 48.24%,
+        #39C31F 51.76%,
+        #43C520 55.44%,
+        #4DC822 59.63%,
+        #57CB23 64.66%,
+        #61CD24 70.88%,
+        #6BD025 78.62%,
+        #74D226 88.21%,
+        #7DD427 100%
+    );
+    --gradient-second: linear-gradient(to right, #09B71A 0%,#791E94 100%);
+    --black: #222222;
+    --black-75: rgba(34, 34, 34, 0.75);
+    --black-50: rgba(34, 34, 34, 0.50);
+    --black-25: rgba(34, 34, 34, 0.25);
+    --black-10: rgba(34, 34, 34, 0.1);
+    --gray: #595959;
+    --light-gray: #999999;
+    --white: #FFFFFF;
+    --darker-white: #CCCCCC;
+    --border-radius: 6px;
+}
+* {
+    transition: all 0.2s ease-in-out;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: var(--text-family);
+    background: var(--black);
+    color: var(--white);
+}
+.container {
+    padding: 0 12px;
+    max-width: 1320px;
+    margin: auto;
+}
+section {margin-bottom: 128px;}
+h1, h2, h3, h4, h5, h6 {font-weight: 700;}
+h1 {font-size: 60px;}
+h2 {font-size: 50px;margin-bottom:96px;}
+h3 {font-size: 44px;}
+h4 {font-size: 36px;}
+h5 {font-size: 30px;}
+h6 {font-size: 25px;}
+p, span, a {font-size: 21px;font-weight: 400;}
+p.small {font-size: 16px;}
+.bold {font-weight: 700;}
+@media(max-width:768px){
+    h1 {font-size: 32px;}
+    h2 {font-size: 28px;}
+    h3 {font-size: 25px;}
+    h4 {font-size: 22px;}
+    h5 {font-size: 20px;}
+    h6 {font-size: 18px;}
+    p {font-size: 16px;}
+    p.small {font-size: 14px;}
+}
+.btn {
+    padding: 16px 32px;
+    background: var(--primary-color);
+    border-radius: var(--border-radius);
+    color: var(--black);
+    font-weight: 700;
+}
+.btn:hover {background: var(--hover-color);}
+.btn:active {background: var(--active-color);}
+a {color: inherit;text-decoration: none;}
+img{width: 100%;}
+button{background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+/*header*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 24px 0;
+}
+header.moved {
+    background: var(--black);
+    box-shadow: 1px var(--gray);
+}
+header .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+header .logo {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+      align-items: center;
+}
+.logo img {width: 50px;}
+.logo:hover {color: var(--darker-white);}
+header nav {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+.nav-item {font-weight: 700;}
+.nav-item:hover {color: var(--darker-white);}
+/*hero section*/
+#hero {
+    padding: 200px 0;
+    background-image: url(/healthyplanner/images/Background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#hero h1 {margin-bottom: 32px;}
+#hero p {margin-bottom: 64px;}
+/*features*/
+.features {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 30px;
+}
+.feature {
+    padding: 32px 40px;
+    border: 1px solid var(--white);
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+}
+.slider-buttons {
+    margin-top: 96px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    display: none;
+}
+.slider-buttons svg {width: 80px;}
+/*footer*/
+footer{padding:24px 0}
+footer .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+footer .logo{
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+footer .logo img{
+    width: 50px;
+}
+footer .logo p{
+    font-size: 16px;
+    color: var(--darker-white);
+}
+/*pomodoro*/
+.bg-layer {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 1s ease;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bg-default {background-image: url(/healthyplanner/images/Background.png);}
+.bg-green {background-image: url(/healthyplanner/images/Background-green.png);}
+.bg-purple {background-image: url(/healthyplanner/images/Background-purple.png);}
+.bg-orange {background-image: url(/healthyplanner/images/Background-orange.png);}
+.bg-layer.active {opacity: 1;}
+#timer {
+    max-width: 620px;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 128px;
+    padding-bottom: 128px;
+}
+.timer-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#timer h1 {margin-bottom: 64px;}
+.pomodoro-square {
+    border: 1px var(--darker-white) solid;
+    border-radius: var(--border-radius);
+    width: 100%;
+    padding-top: 32px;
+    padding-bottom: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.pomo-tabs {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+}
+.btn-switch {
+    border: none;
+    margin: 0;
+    background: none;
+    color: var(--white);
+    padding: 4px 12px;
+    font-size: 16px;
+}
+.btn-switch.active {
+    background-color: var(--black);
+    font-weight: 600;
+}
+.timer-count {
+    display: none;
+    font-size: 120px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+.timer-count.active{display: block;}
+.btn-start {
+    font-size: 21px;
+    margin-bottom: 32px;
+    background: var(--white);
+    box-shadow: 0 6px var(--light-gray);
+}
+.btn-start:hover {background: var(--darker-white);}
+.btn-start:active {background: var(--darker-white);}
+.btn.pressed {
+    box-shadow: none;
+    background-color: var(--darker-white) !important;
+    transform: translateY(6px);
+}
+#progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 10px;
+    background-color: var(--darker-white);
+    transition: width 1s linear;
+    border-radius: 0 0 calc(var(--border-radius) - 2px) calc(var(--border-radius) - 2px);
+}
