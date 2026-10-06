@@ -130,7 +130,7 @@ header nav {
 /*hero section*/
 #hero {
     padding: 200px 0;
-    background-image: url(/healthyplanner/images/Background.png);
+    background-image: url(/images/Background.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -192,10 +192,10 @@ footer .logo p{
     background-repeat: no-repeat;
     background-size: cover;
 }
-.bg-default {background-image: url(/healthyplanner/images/Background.png);}
-.bg-green {background-image: url(/healthyplanner/images/Background-green.png);}
-.bg-purple {background-image: url(/healthyplanner/images/Background-purple.png);}
-.bg-orange {background-image: url(/healthyplanner/images/Background-orange.png);}
+.bg-default {background-image: url(/images/Background.png);}
+.bg-green {background-image: url(/images/Background-green.png);}
+.bg-purple {background-image: url(/images/Background-purple.png);}
+.bg-orange {background-image: url(/images/Background-orange.png);}
 .bg-layer.active {opacity: 1;}
 #timer {
     max-width: 620px;
