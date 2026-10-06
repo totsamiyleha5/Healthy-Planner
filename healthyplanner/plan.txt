@@ -1,0 +1,20 @@
+Phase 1.
+1. [DONE]Logo: find inspiration and get a guide.
+2. [DONE]Logo: watch a guide.
+3. [DONE]Logo: make 2-4 mock-up versions.
+4. [DONE]Logo: create the final one.
+5. [DONE]Download all media and set up the structure.
+6. [DONE]CSS: set up base for your own framework.
+7. [DONE]CSS: for header.
+8. [DONE]CSS: for hero.
+9. [DONE]CSS: for features.
+10.[DONE]CSS: for footer.
+11. [DONE]Remake HTML for pomodoro.
+12. [DONE]CSS: pomodoro background solution.
+13. [DONE]CSS: pomodoro block.
+14. [DONE]Recalibrate JS for Pomodoro.
+15. [DONE]Background animation work.
+16. [DONE]JS for header.
+17. Put all I have on static GitHub.
+18. Think through the meditation timer.
+19. To be continued...
